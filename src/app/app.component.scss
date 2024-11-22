@@ -1,0 +1,78 @@
+.body {
+  font: 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: 0.3em;
+  width: 100%;
+  font-size: 80px;
+  font-weight: 200;
+  text-align: center;
+  color: rgb(172, 43, 71);
+  
+}
+// .page{
+//     padding-left: 38%;
+//     padding-right:38%;
+// }
+body {
+    
+    /* Centers content horizontally */
+       /* Centers content vertically */
+    height: 100vh;            /* Makes sure the container takes full viewport height */
+    margin: 0;    
+                /* Remove default body margin */
+  }
+
+
+.todo {
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  width: auto; 
+  height: 50px;
+  font-size: 25px;
+  padding: 10px;
+  border: none;
+  font-style: italic;
+ 
+
+  &:focus {
+    outline-color: rgb(172, 43, 71);
+  } // Add padding inside the input for better space around text
+  // Optional: Add rounded corners
+}
+
+.list {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+}
+.list2 {
+  background-color: white;
+  width: 307px;
+  
+  
+}
+.strikethrough {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.forbtn{
+  display: flex;
+  justify-content: space-between;
+
+}
+label {
+  font-size: 20px;}
+.bottom{
+  background: white;
+  width: 308px;
+  justify-content: space-between;
+  display: flex;
+  padding-bottom: 10px;
+
+
+}

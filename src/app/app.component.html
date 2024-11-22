@@ -1,0 +1,46 @@
+<body class="page">
+  <h1 class="body">Todos</h1>
+
+  <div class="todo">
+    <input
+      [(ngModel)]="newItem"
+      (keyup.enter)="addTodo()"
+      autofocus=""
+      placeholder="What needs to be done?"
+      class="todo ng-valid ng-touched"
+    />
+  </div>
+  <div class="list">
+    <div *ngIf="filteredData.length" class="list2">
+      <div *ngFor="let item of filteredData" class="forbtn">
+        <span>
+          <input
+            type="checkbox"
+            [checked]="item.completed"
+            (change)="onTaskSelect(item)"
+          />
+          <label [ngClass]="{ strikethrough: item.completed }">{{ item.name }}</label>
+        </span>
+        <span>
+          <button class="close-btn" (click)="onCrossSelect(item._id)">
+            &times;
+          </button>
+        </span>
+      </div>
+      <hr />
+    </div>
+
+    <div class="bottom">
+      <span>{{ taskLeft() }} items left</span>
+      <span>
+        <button (click)="onFilterChange('all')">All</button>
+        <button (click)="onFilterChange('active')">Active</button>
+        <button (click)="onFilterChange('completed')">Completed</button>
+      </span>
+      <span></span>
+    </div>
+  </div>
+  <div *ngIf="!filteredData.length">
+    <p>No tasks available</p>
+  </div>
+</body>
